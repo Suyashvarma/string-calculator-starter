@@ -9,7 +9,7 @@ class StringCalculator {
     	else if(input.length()==1)
     	return toInt(input);
     	else 
-    		return toInt(Array[0])+toInt(Array[1]);
+    		return sum(Array);
     	
     }
     
@@ -19,6 +19,14 @@ class StringCalculator {
     
     private int toInt(String number) {
     	return Integer.parseInt(number);
+    }
+    
+    private int sum(String Array[]) {
+    	int sum=0;
+    	for(String s : Array) {
+    		sum+=toInt(s);
+    	}
+    	return sum;
     }
 
 }
