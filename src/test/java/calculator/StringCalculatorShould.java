@@ -48,4 +48,9 @@ class StringCalculatorShould {
     void string_with_negative_number_should_return_number_as_sum() {
         assertEquals(1, Sc.add("1,-2"));
     }
+    
+    @Test
+    void string_with_multiple_negative_number_should_return_number_as_sum() {
+        assertEquals(1, Sc.add("1,-2,-3"));
+    }
 }
