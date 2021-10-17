@@ -53,4 +53,12 @@ class StringCalculatorShould {
     void string_with_multiple_negative_number_should_return_number_as_sum() {
         assertEquals(1, Sc.add("1,-2,-3"));
     }
+    
+    @Test
+    void test_getCount() {
+    	StringCalculator cal=new StringCalculator();
+    	cal.add("1,2,10");
+    	cal.add("5,6,7");
+        assertEquals(2, cal.getCalledCount());
+    }
 }

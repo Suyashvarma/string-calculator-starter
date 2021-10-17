@@ -1,8 +1,10 @@
 package calculator;
 
 class StringCalculator {
+	int count=0;
 
     public int add(String input) {
+    	count++;
     	if(isEmpty(input))
         return 0;
         if(input.length()==1)
@@ -41,6 +43,10 @@ class StringCalculator {
     		sum+=temp;
     	}
     	return sum;
+    }
+    
+    public int getCalledCount() {
+    	return count;
     }
 
 }
