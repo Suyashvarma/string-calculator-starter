@@ -4,13 +4,21 @@ class StringCalculator {
 
     public int add(String input) {
     	String Array[]=input.split(","); 
-    	if(input.equals(""))
+    	if(isEmpty(input))
         return 0;
     	else if(input.length()==1)
-    	return Integer.parseInt(input);
+    	return toInt(input);
     	else 
-    		return Integer.parseInt(Array[0])+Integer.parseInt(Array[1]);
+    		return toInt(Array[0])+toInt(Array[1]);
     	
+    }
+    
+    private boolean isEmpty(String number) {
+    	return number.isEmpty();
+    }
+    
+    private int toInt(String number) {
+    	return Integer.parseInt(number);
     }
 
 }
