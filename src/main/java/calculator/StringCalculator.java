@@ -3,13 +3,22 @@ package calculator;
 class StringCalculator {
 
     public int add(String input) {
-    	String s=",|\n";
-    	String Array[]=input.split(s); 
     	if(isEmpty(input))
         return 0;
-    	else if(input.length()==1)
+        if(input.length()==1)
     	return toInt(input);
-    	else 
+        String s=",|\n";
+        String Array[]=input.split(s); 
+        try {
+			toInt(Array[0]);
+		} catch (NumberFormatException e) {
+			s=input.split("\n",2)[0];
+			if(s.charAt(0)=='/') {
+				s=s.substring(2,s.length());
+			}
+			Array=input.split("\n",2)[1].split(s);
+		}
+  
     		return sum(Array);
     	
     }
