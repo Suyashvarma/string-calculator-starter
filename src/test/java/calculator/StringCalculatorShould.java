@@ -4,29 +4,33 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
+
 class StringCalculatorShould {
 
+	private StringCalculator Sc;
+	@BeforeEach
+	void init() {
+		Sc=new StringCalculator();
+	}
+	
     @Test
-    void empty_string_should_return_0() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(0, stringCalculator.add(""));
+    void empty_string_should_return_0() {    
+        assertEquals(0, Sc.add(""));
     }
 
     @Test
-    void string_with_single_number_should_return_number_as_int() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(1, stringCalculator.add("1"));
+    void string_with_single_number_should_return_number_as_int() {     
+        assertEquals(1, Sc.add("1"));
     }
     
     @Test
     void string_with_two_number_should_return_number_as_sum() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(3, stringCalculator.add("1,2"));
+        assertEquals(3, Sc.add("1,2"));
     }
     
     @Test
     void string_with_multiple_number_should_return_number_as_sum() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(13, stringCalculator.add("1,2,10"));
+        assertEquals(13, Sc.add("1,2,10"));
     }
 }
