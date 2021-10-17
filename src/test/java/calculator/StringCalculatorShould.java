@@ -61,4 +61,9 @@ class StringCalculatorShould {
     	cal.add("5,6,7");
         assertEquals(2, cal.getCalledCount());
     }
+    
+    @Test
+    void string_with_number_greaterthan1000() {
+        assertEquals(5, Sc.add("1001,5"));
+    }
 }

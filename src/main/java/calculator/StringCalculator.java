@@ -40,6 +40,7 @@ class StringCalculator {
     		if(temp<0)
     			System.out.println("negative not allowed"+s);
     		else
+    			if(temp<1001)
     		sum+=temp;
     	}
     	return sum;
