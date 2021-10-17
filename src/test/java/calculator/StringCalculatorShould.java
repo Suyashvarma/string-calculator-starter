@@ -33,4 +33,9 @@ class StringCalculatorShould {
     void string_with_multiple_number_should_return_number_as_sum() {
         assertEquals(13, Sc.add("1,2,10"));
     }
+    
+    @Test
+    void string_with_newline_delimeter_should_return_number_as_sum() {
+        assertEquals(13, Sc.add("1,2\n10"));
+    }
 }
