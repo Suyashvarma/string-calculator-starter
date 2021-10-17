@@ -43,4 +43,9 @@ class StringCalculatorShould {
     void string_with_multiple_delimeter_should_return_number_as_sum() {
         assertEquals(3, Sc.add("//;\n1;2"));
     }
+    
+    @Test
+    void string_with_negative_number_should_return_number_as_sum() {
+        assertEquals(1, Sc.add("1,-2"));
+    }
 }

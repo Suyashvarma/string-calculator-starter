@@ -34,7 +34,11 @@ class StringCalculator {
     private int sum(String Array[]) {
     	int sum=0;
     	for(String s : Array) {
-    		sum+=toInt(s);
+    		int temp=toInt(s);
+    		if(temp<0)
+    			System.out.println("negative not allowed"+s);
+    		else
+    		sum+=temp;
     	}
     	return sum;
     }
